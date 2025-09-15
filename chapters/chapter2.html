@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>chapter1 – Introduction to `ggplot2`</title>
+<title>chapter2 – Introduction to `ggplot2`</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/chapter2.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../chapters/chapter1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -119,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter1.html">Plot with ggplot2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/chapter2.html">Test with stringr</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,13 +152,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/chapter1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plot with ggplot2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/chapter2.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/chapter2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Test with stringr</span></a>
   </div>
 </li>
@@ -173,14 +172,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-ggplot2" id="toc-introduction-to-ggplot2" class="nav-link active" data-scroll-target="#introduction-to-ggplot2">Introduction to <code>ggplot2</code></a>
+  <li><a href="#introduction-to-stringr" id="toc-introduction-to-stringr" class="nav-link active" data-scroll-target="#introduction-to-stringr">Introduction to stringr</a>
   <ul class="collapse">
-  <li><a href="#what-is-ggplot2" id="toc-what-is-ggplot2" class="nav-link" data-scroll-target="#what-is-ggplot2">What is <code>ggplot2</code>?</a></li>
-  <li><a href="#how-to-use-ggplot2" id="toc-how-to-use-ggplot2" class="nav-link" data-scroll-target="#how-to-use-ggplot2">How to use <code>ggplot2</code></a></li>
+  <li><a href="#how-to-upper-string" id="toc-how-to-upper-string" class="nav-link" data-scroll-target="#how-to-upper-string">How to upper string</a></li>
+  <li><a href="#how-to-extract-substring" id="toc-how-to-extract-substring" class="nav-link" data-scroll-target="#how-to-extract-substring">How to extract substring</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/edit/main/chapters/chapter1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/blob/main/chapters/chapter1.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/edit/main/chapters/chapter2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/blob/main/chapters/chapter2.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -188,41 +186,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="introduction-to-ggplot2" class="level1">
-<h1>Introduction to <code>ggplot2</code></h1>
-<section id="what-is-ggplot2" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-ggplot2">What is <code>ggplot2</code>?</h2>
-<p><code>ggplot2</code> is an amazing package for data visualisation.</p>
-</section>
-<section id="how-to-use-ggplot2" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use-ggplot2">How to use <code>ggplot2</code></h2>
-<p>Here is a code snippet to produce a beautiful plot done with <code>ggplot2</code>.</p>
+<section id="introduction-to-stringr" class="level1">
+<h1>Introduction to stringr</h1>
+<p>The package stringr is useful for playing with strings.</p>
+<section id="how-to-upper-string" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-upper-string">How to upper string</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>iris <span class="ot">&lt;-</span> iris</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris) <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Petal.Length, <span class="at">color =</span> Species))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="ot">&lt;-</span> <span class="st">"Hello work !"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ma_chaine_trans <span class="ot">&lt;-</span> ma_chaine <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>And here is the amazing result.</p>
+</section>
+<section id="how-to-extract-substring" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-extract-substring">How to extract substring</h2>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="chapter1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ma_chaine <span class="ot">&lt;-</span> <span class="st">"Il fait beau et chaud aujourd'hui"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ma_chaine_extrait <span class="ot">&lt;-</span> ma_chaine <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="at">pattern =</span> <span class="st">"[a-z]{4} et "</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Now you know everything on <code>ggplot2</code>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -628,14 +612,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="../chapters/chapter1.html" class="pagination-link" aria-label="Plot with ggplot2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Plot with ggplot2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/chapter2.html" class="pagination-link" aria-label="Test with stringr">
-        <span class="nav-page-text">Test with stringr</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -643,4 +624,4 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/edit/main/chapters/chapter1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/blob/main/chapters/chapter1.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/edit/main/chapters/chapter2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/blob/main/chapters/chapter2.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/Lagaims/AIML4OS-template-quarto-r/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
