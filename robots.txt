@@ -1,1 +1,1 @@
-Sitemap: https://github.com/Lagaims/AIML4OS-template-quarto-r/sitemap.xml
+Sitemap: https://Lagaims.github.io/AIML4OS-template-quarto-r/sitemap.xml
