@@ -1,0 +1,23 @@
+# Introduction to stringr
+
+## How to upper string
+
+```{r}
+#| eval: true
+
+ma_chaine <- "Hello work !"
+
+ma_chaine_trans <- ma_chaine |> stringr::str_to_upper()
+
+```
+
+## How to extract substring
+
+```{r}
+ma_chaine <- "Il fait beau et chaud aujourd'hui"
+
+ma_chaine_extrait <- ma_chaine |> stringr::str_extract(pattern = "[a-z]{4} et ")
+```
+
+
+
