@@ -3,7 +3,6 @@ project:
   render: # Add HERE new chapters (but not the interactive qmd files)
     - index.qmd
     - chapters/chapter1.qmd
-    - chapters/chapter2.qmd
 
 website:
   page-navigation: true
